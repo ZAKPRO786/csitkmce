@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="container">
+    <h2>Payment for {{ event.name }}</h2>
+    <p>Registration Fee: ₹{{ event.registration_fee }}</p>
+    <p><strong>Order ID:</strong> {{ order_id }}</p>
+
+    {% if event.registration_fee > 0 %}
+      <!-- If the registration fee is greater than 0, proceed with Razorpay payment -->
+      <form method="POST" id="paymentForm" style="display:none;">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-success">Proceed to Payment</button>
+      </form>
+
+      <!-- Razorpay button to initiate the payment -->
+      <button id="rzp-button1" class="btn btn-primary">Pay Now</button>
+
+      <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+      <script>
+  document.getElementById("rzp-button1").addEventListener("click", function() {
+    var order_id = "{{ order_id }}";  // Razorpay order ID passed from Django view
+    var amount = {{ event.registration_fee }} * 100;  // Convert ₹ to paise
+
+    var options = {
+      "key": "rzp_test_m8XCiE49EdAHBH",  // Replace with your Razorpay test/live key
+      "amount": amount,
+      "currency": "INR",
+      "name": "Event Registration",
+      "description": "Event Registration Payment",
+      "order_id": order_id,  // Razorpay order ID passed from Django view
+      "handler": function(response) {
+        // Handle successful payment
+        fetch('/verify_payment/', {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            razorpay_payment_id: response.razorpay_payment_id,
+            razorpay_order_id: response.razorpay_order_id,
+            razorpay_signature: response.razorpay_signature
+          })
+        })
+        .then(res => res.json())
+        .then(data => {
+          if (data.status === "Payment Successful") {
+            window.location.href = '/registration_success/';
+          } else {
+            alert("Payment Verification Failed!");
+          }
+        });
+      },
+      "prefill": {
+        "name": "John Doe",  // Dynamic user info can be added here
+        "email": "john@example.com",
+        "contact": "9876543210"
+      },
+      "theme": { "color": "#3399cc" }
+    };
+
+    var rzp1 = new Razorpay(options);
+    rzp1.open();
+  });
+</script>
+
+    {% else %}
+      <!-- If the registration fee is 0, confirm registration -->
+      <p>Your registration fee is 0, so your registration is already confirmed!</p>
+      <a href="{% url 'index' %}" class="btn btn-primary">Go to Home</a>
+    {% endif %}
+  </div>
+{% endblock %}

@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>CSI  TKMCE</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: TheEvent
+  * Template URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <img src="{% static 'assets/img/CSILOGOORG.png' %}" alt="">
+        <!-- Uncomment the line below if you also wish to use an text logo -->
+        <h1 class="sitename">CSI TKMCE</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home<br></a></li>
+          <li><a href="#hero">About</a></li>
+           <li><a href="#team">Team</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+         <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Dropdown 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Deep Dropdown 1</a></li>
+                  <li><a href="#">Deep Dropdown 2</a></li>
+                  <li><a href="#">Deep Dropdown 3</a></li>
+                  <li><a href="#">Deep Dropdown 4</a></li>
+                  <li><a href="#">Deep Dropdown 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Dropdown 2</a></li>
+              <li><a href="#">Dropdown 3</a></li>
+              <li><a href="#">Dropdown 4</a></li>
+            </ul>
+          </li>-->
+          <li><a href="#contact">Contact</a></li>
+          <li>  <a class="cta-btn d-none d-sm-block" href="{% url 'register' %}">Register</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+
+
+    </div>
+  </header>
+
+  <main class="main">
+
+   <!-- Hero Section -->
+<section id="hero" class="hero section dark-background">
+
+    <video autoplay muted loop class="video-background">
+        <source src="/media/csback.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+<div class="container d-flex flex-column align-items-center text-center mt-auto">
+  <!-- Welcome Section -->
+  <h2 data-aos="fade-up" data-aos-delay="100" class="welcome-heading">
+    WELCOME TO <br><span>CSI TKMCE</span>
+  </h2>
+  <p data-aos="fade-up" data-aos-delay="200" class="welcome-subtitle">Where Innovation Meets Collaboration</p>
+  <p class="welcome-description">The Computer Society of India (CSI) - TKMCE Chapter is a vibrant community of tech enthusiasts, developers, and innovators at TKM College of Engineering. As a proud extension of India’s premier body of IT professionals, we aim to nurture talent, foster creativity, and provide a platform for students to explore and excel in the world of technology.</p>
+</div>
+
+<!-- About Us Section -->
+<div class="about-info mt-auto position-relative">
+  <div class="container position-relative" data-aos="fade-up">
+    <div class="row">
+      <div class="col-lg-6">
+        <h2 class="about-title">About Us</h2>
+        <p class="about-description">We are a dynamic team of students and faculty members passionate about technology, problem-solving, and learning. Our mission is to equip members with the skills and exposure they need to thrive in the fast-paced tech world.
+        Whether you’re a coder, designer, innovator, or someone curious about tech, CSI TKMCE welcomes you!</p>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  /* General Styling */
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.welcome-heading {
+  font-size: 48px;
+  font-weight: bold;
+  color: #333;
+  line-height: 1.3;
+}
+
+.welcome-heading span {
+  color: #00bfae; /* CSI TKMCE color */
+}
+
+.welcome-subtitle {
+  font-size: 24px;
+  font-weight: 500;
+  color: #777;
+  margin-top: 10px;
+}
+
+/* About Us Section */
+.about-info {
+  padding: 60px 0;
+  background-color: #000000;; /* Background color */
+  text-align: center; /* Center everything inside this section */
+}
+
+.about-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #a32121
+  margin-bottom: 20px;
+}
+
+.about-description {
+  font-size: 24px; /* Increased font size */
+  color: red; /* Text color set to red */
+  line-height: 1.7;
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .welcome-heading {
+    font-size: 40px;
+  }
+
+  .welcome-subtitle {
+    font-size: 22px;
+  }
+
+  .welcome-description {
+    font-size: 16px;
+  }
+
+  .about-title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .welcome-heading {
+    font-size: 36px;
+  }
+
+  .welcome-subtitle {
+    font-size: 20px;
+  }
+
+  .welcome-description {
+    font-size: 14px;
+  }
+
+  .about-title {
+    font-size: 28px;
+  }
+}
+
+</style>
+<section id="team" class="speakers section">
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Our Team</h2>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+    <div class="row gy-4" id="team-container">
+      <!-- Team Members -->
+
+      <div class="col-xl-3 col-lg-4 col-md-6 team-member" data-aos="zoom-in" data-aos-delay="{{ forloop.counter|add:1 }}00">
+        <div class="member">
+          <img src="{% static 'assets/img/execom/aby.png' %}" class="img-fluid team-image" alt="Aby Thankachan">
+          <div class="member-info">
+            <div class="member-info-content">
+              <h4>Aby Thankachan</h4>
+              <span>ChairMan</span>
+            </div>
+          </div>
+        </div>
+      </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 team-member" data-aos="zoom-in" data-aos-delay="{{ forloop.counter|add:1 }}00">
+        <div class="member">
+          <img src="{% static 'assets/img/execom/VICECHAIR.png' %}" class="img-fluid team-image" alt="m">
+          <div class="member-info">
+            <div class="member-info-content">
+              <h4>Muhammed&nbsp;Bin&nbsp;Shafeeq</h4>
+              <span>Vice ChairMan</span>
+            </div>
+          </div>
+        </div>
+      </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 team-member" data-aos="zoom-in" data-aos-delay="{{ forloop.counter|add:1 }}00">
+        <div class="member">
+          <img src="{% static 'assets/img/execom/manu.png' %}" class="img-fluid team-image" alt="manu">
+          <div class="member-info">
+            <div class="member-info-content">
+              <h4>Manudev MS</h4>
+              <span>Secretary</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-lg-4 col-md-6 team-member" data-aos="zoom-in" data-aos-delay="{{ forloop.counter|add:1 }}00">
+        <div class="member">
+          <img src="{% static 'assets/img/execom/Arya.png' %}" class="img-fluid team-image" alt="m">
+          <div class="member-info">
+            <div class="member-info-content">
+              <h4>Arya Rajeev</h4>
+              <span>Treasurer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+       <div class="col-xl-3 col-lg-4 col-md-6 team-member" data-aos="zoom-in" data-aos-delay="{{ forloop.counter|add:1 }}00">
+        <div class="member">
+          <img src="{% static 'assets/img/execom/jeffnew1.png' %}" class="img-fluid team-image" alt="m">
+          <div class="member-info">
+            <div class="member-info-content">
+              <h4>Jeff Varghese Jo</h4>
+              <span>Design Head</span>
+            </div>
+          </div>
+        </div>
+      </div>
+<div class="col-xl-3 col-lg-4 col-md-6 team-member" data-aos="zoom-in" data-aos-delay="{{ forloop.counter|add:1 }}00">
+        <div class="member">
+          <img src="{% static 'assets/img/execom/shihabnew1.png' %}" class="img-fluid team-image" alt="m">
+          <div class="member-info">
+            <div class="member-info-content">
+              <h4>Shihabudden&nbsp;Shahand</h4>
+              <span>Tech Head</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-lg-4 col-md-6 team-member" data-aos="zoom-in" data-aos-delay="{{ forloop.counter|add:1 }}00">
+        <div class="member">
+          <img src="{% static 'assets/img/execom/zaknews1.png' %}" class="img-fluid team-image" alt="m">
+          <div class="member-info">
+            <div class="member-info-content">
+              <h4>Muhammed&nbsp;Zachariya</h4>
+              <span>Tech Head</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-lg-4 col-md-6 team-member" data-aos="zoom-in" data-aos-delay="{{ forloop.counter|add:1 }}00">
+        <div class="member">
+          <img src="{% static 'assets/img/execom/devika.png' %}" class="img-fluid team-image" alt="m">
+          <div class="member-info">
+            <div class="member-info-content">
+              <h4>Devika Saji</h4>
+              <span>Publicity Head</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-lg-4 col-md-6 team-member" data-aos="zoom-in" data-aos-delay="{{ forloop.counter|add:1 }}00">
+        <div class="member">
+          <img src="{% static 'assets/img/execom/raihannew1.png' %}" class="img-fluid team-image" alt="m">
+          <div class="member-info">
+            <div class="member-info-content">
+              <h4>Raihan Rasheed</h4>
+              <span>Program Coordinator</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+          <div class="col-xl-3 col-lg-4 col-md-6 team-member" data-aos="zoom-in" data-aos-delay="{{ forloop.counter|add:1 }}00">
+        <div class="member">
+          <img src="{% static 'assets/img/execom/Rishikesh.png' %}" class="img-fluid team-image" alt="m">
+          <div class="member-info">
+            <div class="member-info-content">
+              <h4>Rishikesh</h4>
+              <span>Program Coordinator</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+         <div class="col-xl-3 col-lg-4 col-md-6 team-member" data-aos="zoom-in" data-aos-delay="{{ forloop.counter|add:1 }}00">
+        <div class="member">
+          <img src="{% static 'assets/img/execom/neha.png' %}" class="img-fluid team-image" alt="m">
+          <div class="member-info">
+            <div class="member-info-content">
+              <h4>Neha N</h4>
+              <span>Publicity Head</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-lg-4 col-md-6 team-member" data-aos="zoom-in" data-aos-delay="{{ forloop.counter|add:1 }}00">
+        <div class="member">
+          <img src="{% static 'assets/img/execom/Devna.png' %}" class="img-fluid team-image" alt="m">
+          <div class="member-info">
+            <div class="member-info-content">
+              <h4>Devna M Lal</h4>
+              <span>Doc Head</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-lg-4 col-md-6 team-member" data-aos="zoom-in" data-aos-delay="{{ forloop.counter|add:1 }}00">
+        <div class="member">
+          <img src="{% static 'assets/img/execom/Alan.png' %}" class="img-fluid team-image" alt="m">
+          <div class="member-info">
+            <div class="member-info-content">
+              <h4>Alan saji</h4>
+              <span>Doc Head</span>
+            </div>
+          </div>
+        </div>
+      </div>
+<div class="col-xl-3 col-lg-4 col-md-6 team-member" data-aos="zoom-in" data-aos-delay="{{ forloop.counter|add:1 }}00">
+        <div class="member">
+          <img src="{% static 'assets/img/execom/Adhiva.png' %}" class="img-fluid team-image" alt="m">
+          <div class="member-info">
+            <div class="member-info-content">
+              <h4>Adhiva Anil</h4>
+              <span>Membership Head</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-4 col-md-6 team-member" data-aos="zoom-in" data-aos-delay="{{ forloop.counter|add:1 }}00">
+        <div class="member">
+          <img src="{% static 'assets/img/execom/Athira.png' %}" class="img-fluid team-image" alt="m">
+          <div class="member-info">
+            <div class="member-info-content">
+              <h4>Athira</h4>
+              <span>Design Team</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-lg-4 col-md-6 team-member" data-aos="zoom-in" data-aos-delay="{{ forloop.counter|add:1 }}00">
+        <div class="member">
+          <img src="{% static 'assets/img/execom/noah.png' %}" class="img-fluid team-image" alt="m">
+          <div class="member-info">
+            <div class="member-info-content">
+              <h4>Noah John</h4>
+              <span>Tech Team</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+       <div class="col-xl-3 col-lg-4 col-md-6 team-member" data-aos="zoom-in" data-aos-delay="{{ forloop.counter|add:1 }}00">
+        <div class="member">
+          <img src="{% static 'assets/img/execom/Adhithyadev.png' %}" class="img-fluid team-image" alt="m">
+          <div class="member-info">
+            <div class="member-info-content">
+              <h4>Adhithyadev</h4>
+              <span>Social Media Head</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+       <div class="col-xl-3 col-lg-4 col-md-6 team-member" data-aos="zoom-in" data-aos-delay="{{ forloop.counter|add:1 }}00">
+        <div class="member">
+          <img src="{% static 'assets/img/execom/Jobin.png' %}" class="img-fluid team-image" alt="m">
+          <div class="member-info">
+            <div class="member-info-content">
+              <h4>Jobin AJ</h4>
+              <span>Volunteer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+       <div class="col-xl-3 col-lg-4 col-md-6 team-member" data-aos="zoom-in" data-aos-delay="{{ forloop.counter|add:1 }}00">
+        <div class="member">
+          <img src="{% static 'assets/img/execom/Jonathan.png' %}" class="img-fluid team-image" alt="m">
+          <div class="member-info">
+            <div class="member-info-content">
+              <h4>Jonathan Paul</h4>
+              <span>Volunteer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <!-- Pagination Controls -->
+    <div class="pagination" id="pagination-controls"></div>
+  </div>
+
+  <!-- Modal for Larger Image -->
+  <div id="image-modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-image">
+    <div id="caption"></div>
+  </div>
+</section>
+
+<style>
+  .member {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  .member:hover {
+    transform: scale(1.05);
+  }
+  .member img {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease-in-out;
+  }
+  .member-info {
+    position: absolute;
+    bottom: 80px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  /* Modal */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  .modal-content {
+    display: block;
+    margin: auto;
+    max-width: 80%;
+  }
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.member img').forEach(img => {
+    img.addEventListener('click', function () {
+      document.getElementById('image-modal').style.display = 'block';
+      document.getElementById('modal-image').src = this.src;
+    });
+  });
+  document.querySelector('.close').addEventListener('click', function () {
+    document.getElementById('image-modal').style.display = 'none';
+  });
+</script>
+
+<!-- CSS for Pagination and Modal -->
+<style>
+  .pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .page-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+
+  .page-button:hover {
+    background-color: #0056b3;
+  }
+
+  .page-button.active {
+    background-color: #0056b3;
+    font-weight: bold;
+  }
+
+  /* Modal Styling */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  .modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    height: auto;
+  }
+
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: white;
+    padding: 10px 0;
+    font-size: 18px;
+  }
+
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+</style>
+
+<!-- JavaScript for Pagination and Modal -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const teamMembers = document.querySelectorAll(".team-member");
+    const itemsPerPage = 4; // Number of members per page
+    const paginationControls = document.getElementById("pagination-controls");
+    const teamContainer = document.getElementById("team-container");
+
+    // Modal elements
+    const modal = document.getElementById("image-modal");
+    const modalImg = document.getElementById("modal-image");
+    const captionText = document.getElementById("caption");
+    const closeModal = document.querySelector(".modal .close");
+
+    // Open modal when clicking an image
+    const images = document.querySelectorAll(".team-image");
+    images.forEach((image) => {
+      image.addEventListener("click", function () {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+      });
+    });
+
+    // Close modal
+    closeModal.addEventListener("click", function () {
+      modal.style.display = "none";
+    });
+
+    // Render a specific page
+    function renderPage(page) {
+      teamMembers.forEach((member, index) => {
+        member.style.display =
+          index >= (page - 1) * itemsPerPage && index < page * itemsPerPage
+            ? "block"
+            : "none";
+      });
+    }
+
+    // Create pagination buttons
+    function createPaginationButtons() {
+      const totalPages = Math.ceil(teamMembers.length / itemsPerPage);
+      for (let i = 1; i <= totalPages; i++) {
+        const button = document.createElement("button");
+        button.textContent = i;
+        button.className = "page-button";
+        button.addEventListener("click", () => {
+          renderPage(i);
+          highlightActiveButton(i);
+        });
+        paginationControls.appendChild(button);
+      }
+    }
+
+    // Highlight the active button
+    function highlightActiveButton(activePage) {
+      const buttons = document.querySelectorAll(".page-button");
+      buttons.forEach((button, index) => {
+        button.classList.toggle("active", index + 1 === activePage);
+      });
+    }
+
+    // Initialize pagination
+    renderPage(1); // Show the first page by default
+    createPaginationButtons();
+    highlightActiveButton(1); // Highlight the first button
+  });
+</script>
+
+
+
+<!-- Venue Section -->
+<section id="events" class="venue section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Our events<br></h2>
+    <p>Explore some of the amazing events we’ve hosted at our venue.</p>
+  </div><!-- End Section Title -->
+
+  <!-- Venue Gallery -->
+  <div class="container-fluid venue-gallery-container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row g-0">
+
+      <div class="col-lg-3 col-md-4">
+        <div class="venue-gallery">
+          <a href="{% static 'assets/img/linkp.jpg' %}" class="glightbox" data-gall="venue-gallery">
+            <img src="{% static 'assets/img/linkp.jpg' %}" alt="Event LinkP" class="img-fluid">
+          </a>
+          <div class="venue-caption">
+            <h5>LinkP Event</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4">
+        <div class="venue-gallery">
+          <a href="{% static 'assets/img/letc.jpg' %}" class="glightbox" data-gall="venue-gallery">
+            <img src="{% static 'assets/img/letc.jpg' %}" alt="Event LetC" class="img-fluid">
+          </a>
+          <div class="venue-caption">
+            <h5>LetC Conference</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4">
+        <div class="venue-gallery">
+          <a href="{% static 'assets/img/git.jpg' %}" class="glightbox" data-gall="venue-gallery">
+            <img src="{% static 'assets/img/git.jpg' %}" alt="Event Git" class="img-fluid">
+          </a>
+          <div class="venue-caption">
+            <h5>Git Workshop</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4">
+        <div class="venue-gallery">
+          <a href="{% static 'assets/img/exp.jpg' %}" class="glightbox" data-gall="venue-gallery">
+            <img src="{% static 'assets/img/exp.jpg' %}" alt="Event Expo" class="img-fluid">
+          </a>
+          <div class="venue-caption">
+            <h5>Expo 2024</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4">
+        <div class="venue-gallery">
+          <a href="{% static 'assets/img/gameofteh.jpg' %}" class="glightbox" data-gall="venue-gallery">
+            <img src="{% static 'assets/img/gameofteh.jpg' %}" alt="Event Game of Tech" class="img-fluid">
+          </a>
+          <div class="venue-caption">
+            <h5>Game of Tech</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4">
+        <div class="venue-gallery">
+          <a href="{% static 'assets/img/cisco.jpg' %}" class="glightbox" data-gall="venue-gallery">
+            <img src="{% static 'assets/img/cisco.jpg' %}" alt="Event Cisco Conference" class="img-fluid">
+          </a>
+          <div class="venue-caption">
+            <h5>Cisco Annual Meetup</h5>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section><!-- /Venue Section -->
+<style>
+  /* General section styling */
+#events {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+  border-top: 3px solid #00bfae; /* Accent line on top */
+}
+
+/* Section Title */
+#events .section-title h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#events .section-title p {
+  font-size: 18px;
+  color: #777;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+}
+
+/* Venue Gallery Container */
+.venue-gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between images */
+}
+
+.venue-gallery {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Image styling */
+.venue-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effects for images */
+.venue-gallery:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.venue-gallery a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Lightbox - Add some overlay effect for better visibility */
+.glightbox {
+  position: relative;
+}
+
+.glightbox:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* Dark overlay on hover */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.venue-gallery:hover .glightbox:before {
+  opacity: 1;
+}
+
+/* Caption styling */
+.venue-caption {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.venue-gallery:hover .venue-caption {
+  opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .venue-gallery-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 767px) {
+  #events .section-title h2 {
+    font-size: 30px;
+  }
+
+  .venue-gallery-container {
+    gap: 15px;
+  }
+
+  .venue-gallery {
+    width: 100%;
+  }
+}
+
+</style>
+
+
+
+   <!-- Gallery Section -->
+<section id="gallery" class="gallery section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Gallery</h2>
+    <p>Explore our captivating images from various events and moments.</p>
+  </div><!-- End Section Title -->
+
+  <!-- Swiper Container -->
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="swiper init-swiper">
+      <script type="application/json" class="swiper-config">
+        {
+          "loop": true,
+          "speed": 600,
+          "autoplay": {
+            "delay": 5000
+          },
+          "slidesPerView": "auto",
+          "centeredSlides": true,
+          "pagination": {
+            "el": ".swiper-pagination",
+            "type": "bullets",
+            "clickable": true
+          },
+          "breakpoints": {
+            "320": {
+              "slidesPerView": 1,
+              "spaceBetween": 10
+            },
+            "768": {
+              "slidesPerView": 3,
+              "spaceBetween": 20
+            },
+            "1200": {
+              "slidesPerView": 5,
+              "spaceBetween": 20
+            }
+          }
+        }
+      </script>
+      <div class="swiper-wrapper align-items-center">
+
+        <div class="swiper-slide">
+          <a class="glightbox" data-gallery="images-gallery" href="{% static 'assets/img/gallery/gal11.jpg' %}">
+            <img src="{% static 'assets/img/gallery/gal11.jpg' %}" class="img-fluid gallery-img" alt="Event Image 2">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a class="glightbox" data-gallery="images-gallery" href="{% static 'assets/img/gallery/gal21.jpg' %}">
+            <img src="{% static 'assets/img/gallery/gal21.jpg' %}" class="img-fluid gallery-img" alt="Event Image 3">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a class="glightbox" data-gallery="images-gallery" href="{% static 'assets/img/gallery/gal31.jpg' %}">
+            <img src="{% static 'assets/img/gallery/gal31.jpg' %}" class="img-fluid gallery-img" alt="Event Image 4">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a class="glightbox" data-gallery="images-gallery" href="{% static 'assets/img/gallery/gal41.jpg' %}">
+            <img src="{% static 'assets/img/gallery/gal41.jpg' %}" class="img-fluid gallery-img" alt="Event Image 5">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a class="glightbox" data-gallery="images-gallery" href="{% static 'assets/img/gallery/gal51.jpg' %}">
+            <img src="{% static 'assets/img/gallery/gal51.jpg' %}" class="img-fluid gallery-img" alt="Event Image 6">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a class="glightbox" data-gallery="images-gallery" href="{% static 'assets/img/gallery/gal61.jpg' %}">
+            <img src="{% static 'assets/img/gallery/gal61.jpg' %}" class="img-fluid gallery-img" alt="Event Image 7">
+          </a>
+        </div>
+
+        <!-- Add more images here -->
+      </div>
+
+      <!-- Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </div><!-- End Swiper Container -->
+
+</section><!-- /Gallery Section -->
+<style>
+  /* Gallery Section Styling */
+#gallery {
+  padding: 60px 0;
+  background-color: #f8f8f8;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Section Title */
+#gallery .section-title h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#gallery .section-title p {
+  font-size: 18px;
+  color: #666;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+}
+
+/* Swiper Container */
+.swiper {
+  position: relative;
+  padding-top: 40px; /* Space for pagination bullets */
+  padding-bottom: 40px;
+}
+
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Image Styling */
+.gallery-img {
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-img:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Pagination Styling */
+.swiper-pagination {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.swiper-pagination-bullet {
+  background-color: #00bfae;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  border-radius: 50%;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.swiper-pagination-bullet:hover {
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #009a86;
+  opacity: 1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+  #gallery .section-title h2 {
+    font-size: 32px;
+  }
+
+  .swiper-wrapper {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  #gallery .section-title h2 {
+    font-size: 28px;
+  }
+
+  #gallery .section-title p {
+    font-size: 16px;
+  }
+
+  .swiper-wrapper {
+    gap: 10px;
+  }
+}
+
+</style>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p></p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-geo-alt"></i>
+              <h3>Address</h3>
+              <p>CSI TKMCE</p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-telephone"></i>
+              <h3>Call Us</h3>
+              <p></p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-envelope"></i>
+              <h3>Email Us</h3>
+              <p>csitkmce@gmail.com</p>
+            </div>
+          </div><!-- End Info Item -->
+
+        </div>
+
+        <div class="row gy-4 mt-1">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3941.626941941006!2d76.62937717352712!3d8.914230390777988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05fd3036020df5%3A0xc3c1007e5232dc27!2sTKM%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1736087000232!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div><!-- End Google Maps -->
+
+          <div class="col-lg-6">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="400">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6 footer-about">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <span class="sitename">CSI TKMCE</span>
+            </a>
+            <div class="footer-contact pt-3">
+              <p>CSI SOCIETY</p>
+              <p>TKM COLLEGE OF ENGINEERING</p>
+              <p class="mt-3"><strong>Phone:</strong> <span></span></p>
+              <p><strong>Email:</strong> <span>csitkmce@gmail.com</span></p>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Terms of service</a></li>
+              <li><a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+
+
+
+
+
+
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright text-center">
+      <div class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
+
+        <div class="d-flex flex-column align-items-center align-items-lg-start">
+          <div>
+            © Copyright <strong><span>CSI TKMCE</span></strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+            <!-- All the links in the footer should remain intact. -->
+            <!-- You can delete the links only if you purchased the pro version. -->
+            <!-- Licensing information: https://bootstrapmade.com/license/ -->
+            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/herobiz-bootstrap-business-template/ -->
+            Designed by <a href="https://www.linkedin.com/in/muhammed-zachariya-a27999301/">MUHAMMED ZACHARIYA</a>
+          </div>
+        </div>
+
+        <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
+
+          <a href=""><i class="bi bi-instagram"></i></a>
+          <a href=""><i class="bi bi-linkedin"></i></a>
+        </div>
+
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

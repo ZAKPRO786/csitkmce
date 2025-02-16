@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="card shadow-lg p-4 rounded" style="max-width: 500px; width: 100%;">
+        <div class="card-body">
+            <h2 class="text-center mb-4 text-primary fw-bold">Register for CSI Club</h2>
+            <form method="post">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="username" class="form-label fw-semibold">Username</label>
+                    {{ form.username }}
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label fw-semibold">Email</label>
+                    {{ form.email }}
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label fw-semibold">Password</label>
+                    {{ form.password }}
+                </div>
+                <div class="mb-3">
+                    <label for="confirm_password" class="form-label fw-semibold">Confirm Password</label>
+                    {{ form.confirm_password }}
+                </div>
+                <div class="mb-3">
+                    <label for="phone_number" class="form-label fw-semibold">Phone Number</label>
+                    {{ form.phone_number }}
+                </div>
+                <div class="mb-3">
+                    <label for="department" class="form-label fw-semibold">Department</label>
+                    {{ form.department }}
+                </div>
+                <div class="mb-3">
+                    <label for="batch" class="form-label fw-semibold">Batch</label>
+                    {{ form.batch }}
+                </div>
+                <div class="mb-3">
+                    <label for="year" class="form-label fw-semibold">Year</label>
+                    {{ form.year }}
+                </div>
+                <button type="submit" class="btn btn-primary w-100 py-2 fw-semibold">Register</button>
+            </form>
+            <p class="text-center mt-3">
+                Already have an account? <a href="{% url 'login' %}" class="text-decoration-none text-primary fw-bold">Login here</a>
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

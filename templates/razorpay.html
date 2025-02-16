@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block content %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Razorpay Payment</title>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #f4f6f9;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 450px;
+            margin: 80px auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 40px;
+            font-weight: 500;
+        }
+
+        .amount {
+            font-size: 36px;
+            font-weight: bold;
+            color: #007bff;
+            margin: 10px 0;
+        }
+
+        .cta-btn {
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 15px 0;
+            border: none;
+            border-radius: 8px;
+            width: 100%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .cta-btn:focus {
+            outline: none;
+        }
+
+        .footer {
+            font-size: 14px;
+            color: #777;
+            margin-top: 30px;
+        }
+
+        .footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Complete Your Payment</h2>
+        <p>You're just one step away from completing your payment.</p>
+        <div class="amount">₹{{ amount }}</div>
+        <button id="rzp-button1" class="cta-btn">Pay Now</button>
+        <div class="footer">
+            <p>Need help? <a href="mailto:support@example.com">Contact Support</a></p>
+        </div>
+    </div>
+
+   <script>
+    document.getElementById("rzp-button1").addEventListener("click", function() {
+        var amountInINR = {{ amount }};  // Amount passed from backend in INR
+        var amountInPaise = amountInINR * 100;  // Multiply by 100 to convert INR to paise
+
+        var options = {
+            "key": "",  // Replace with your Razorpay key
+            "amount": amountInPaise,  // Amount in paise
+            "currency": "INR",
+            "order_id": "{{ order_id }}",  // Razorpay order ID
+            "handler": function(response) {
+                // Handle the payment response
+                alert("Payment Successful! Payment ID: " + response.razorpay_payment_id);
+
+                // Send payment details to the backend for verification
+               fetch('/verify_payment/', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+        razorpay_payment_id: response.razorpay_payment_id,
+        razorpay_order_id: response.razorpay_order_id,
+        razorpay_signature: response.razorpay_signature,
+    })
+})
+.then(response => response.json())
+.then(data => {
+    console.log("✅ Payment Verification Response:", data);
+
+    if (data.status === "success") {
+        // Redirect to dashboard upon successful verification
+        window.location.href = data.redirect_url;
+    } else {
+        alert("⚠ Payment verification failed. Please try again.");
+    }
+})
+.catch(error => {
+    console.error("❌ Error verifying payment:", error);
+    alert("An error occurred while verifying the payment.");
+});
+            },
+            "prefill": {
+                "name": "{{ request.user.username }}",
+                "email": "{{ request.user.email }}",
+                "contact": "9876543210"
+            },
+            "theme": {
+                "color": "#007bff"
+            }
+        };
+
+        var rzp1 = new Razorpay(options);
+        rzp1.open();
+    });
+</script>
+
+</body>
+</html>
+{% endblock %}
